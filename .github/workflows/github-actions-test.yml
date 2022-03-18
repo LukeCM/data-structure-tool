@@ -1,0 +1,7 @@
+name: Test Action
+on: [push]
+jobs:
+  Run-Test-Suite-On-Push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
