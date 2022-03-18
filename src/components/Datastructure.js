@@ -6,11 +6,11 @@ import { TextField } from "@mui/material";
 
 
 function Datastructure() {
-    const api = new Api();
     let [items, setItems] = useState(null);
     let [searchWord, setSearchWord] = useState('');
 
     useEffect(() => {
+        const api = new Api();
         api.getItemsList()
         .then((result) => {
             if (result !== null && result.data !== null) {

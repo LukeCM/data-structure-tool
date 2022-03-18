@@ -11,9 +11,11 @@ export default class Api {
 
     // This whole block is needed to do a simple validation to CORS with a one way passing of header
     // This ensures that the Browser CORS will not block requests from the above api endpoint
+    //
     const invocation = new XMLHttpRequest();
     
     if (invocation) {
+    invocation.open('GET', this.api_url);
     invocation.open('GET', this.api_url + '/entries');
     invocation.onreadystatechange = function () {
         // In local files, status is 0 upon success in Mozilla Firefox
