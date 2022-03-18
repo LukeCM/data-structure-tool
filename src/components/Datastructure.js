@@ -18,6 +18,11 @@ function Datastructure() {
            }
         })
         .catch((err) => console.log(err));
+
+        // Unmount of useEffect, clean up state
+        return () => {
+            setItems({});
+        }
     },[]);
 
     const search = (input) => {

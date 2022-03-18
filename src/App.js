@@ -4,13 +4,15 @@ import Datastructure from './components/Datastructure';
 
 function App() {
   return (
-    <div className="App">
-      <body>
+    <>
+      <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Welcome to the React search and find</h2>
-        <Datastructure/>
-      </body>
-    </div>
+        <div>
+          <Datastructure/>
+        </div>
+      </div>
+    </>
   );
 }
 
